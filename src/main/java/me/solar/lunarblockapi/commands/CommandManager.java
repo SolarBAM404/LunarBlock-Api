@@ -6,11 +6,20 @@ import org.bukkit.command.PluginCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 
-public class CommandManager {
+/**
+ * Static command manager
+ */
+public final class CommandManager {
 
     CommandManager() {
     }
 
+    /**
+     * Register command.
+     *
+     * @param plugin    the plugin
+     * @param framework the framework
+     */
     public static void registerCommand(@NotNull JavaPlugin plugin, @NotNull CommandFramework framework) {
         PluginCommand command = plugin.getCommand(framework.getCmdName());
 
@@ -33,6 +42,12 @@ public class CommandManager {
         }
     }
 
+    /**
+     * Unregister command.
+     *
+     * @param plugin  the plugin
+     * @param cmdName the cmd name
+     */
     public static void unregisterCommand(JavaPlugin plugin, String cmdName) {
         try {
             PluginCommand command = plugin.getCommand(cmdName);
