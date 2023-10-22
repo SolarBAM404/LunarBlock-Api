@@ -30,7 +30,9 @@ public class CustomItem {
         this.name = name;
         this.material = itemStack.getType();
 
-        itemStack.getItemMeta().displayName(name);
+        ItemMeta meta = itemStack.getItemMeta();
+        meta.displayName(name);
+        itemStack.setItemMeta(meta);
     }
 
     public <T, Z> void addData(JavaPlugin plugin, String namespace, PersistentDataType<T, Z> dataType, Z value) {
@@ -42,7 +44,7 @@ public class CustomItem {
     }
 
     public void removeData(JavaPlugin plugin, String namespace) {
-        ItemMeta meta = itemStack.getItemMeta();
+        ItemMeta meta = getItem().getItemMeta();
         PersistentDataContainer container = getContainer();
         NamespacedKey key = new NamespacedKey(plugin, namespace);
         container.remove(key);
@@ -56,7 +58,7 @@ public class CustomItem {
     }
 
     public PersistentDataContainer getContainer() {
-        ItemMeta meta = itemStack.getItemMeta();
+        ItemMeta meta = getItem().getItemMeta();
         return meta.getPersistentDataContainer();
     }
 
@@ -93,11 +95,16 @@ public class CustomItem {
         if (!isEmpty && !force) {
             throw new NoFreeSpaceException("No free space for item to be placed");
         } else if (isEmpty && !force) {
-            inventory.setItem(index, itemStack);
+            inventory.setItem(index, getItem());
         } else {
-            inventory.setItem(slot, itemStack);
+            inventory.setItem(slot, getItem());
         }
+    }
 
-
+    public ItemStack getItem() {
+        ItemMeta meta = itemStack.getItemMeta();
+        meta.displayName(name);
+        itemStack.setItemMeta(meta);
+        return itemStack;
     }
 }
