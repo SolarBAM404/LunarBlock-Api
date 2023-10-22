@@ -1,7 +1,7 @@
-package me.solar.lunarlib.items;
+package com.lunardev.lunarlib.items;
 
+import com.lunardev.lunarlib.exceptions.NoFreeSpaceException;
 import lombok.Data;
-import me.solar.lunarlib.exceptions.NoFreeSpaceException;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;

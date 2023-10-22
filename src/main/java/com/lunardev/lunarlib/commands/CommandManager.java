@@ -1,4 +1,4 @@
-package me.solar.lunarlib.commands;
+package com.lunardev.lunarlib.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;

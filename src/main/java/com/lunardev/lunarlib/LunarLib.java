@@ -1,4 +1,4 @@
-package me.solar.lunarlib;
+package com.lunardev.lunarlib;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
