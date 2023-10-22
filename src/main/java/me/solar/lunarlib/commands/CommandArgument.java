@@ -1,4 +1,4 @@
-package me.solar.lunarblockapi.commands;
+package me.solar.lunarlib.commands;
 
 import lombok.Data;
 import lombok.NonNull;

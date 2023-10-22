@@ -1,11 +1,11 @@
-package me.solar.lunarblockapi;
+package me.solar.lunarlib;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
  *
  */
-public final class LunarBlockApi extends JavaPlugin {
+public final class LunarLib extends JavaPlugin {
 
     @Override
     public void onEnable() {
