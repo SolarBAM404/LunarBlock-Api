@@ -7,7 +7,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Standard string type argument with or without an attach permission node
+ * Standard string type argument with or without an attach permission node.
  */
 @Data
 public class CommandArgument {
