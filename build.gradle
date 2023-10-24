@@ -63,13 +63,13 @@ checkstyleTest {
 apply plugin: 'net.minecrell.plugin-yml.bukkit'
 bukkit {
     // Default values can be overridden if needed
-    name = 'AdventureTrain'
+    name = 'LunarLibrary'
     version = getVersion()
-    description = 'A game called Adventure Train'
+    description = 'A library for my Minecraft Paper Plugins'
     website = 'https://sparkblock.net'
 
     // Plugin main class (required)
-    main = 'me.solar.lunarblockapi.'
+    main = 'com.lunardev.lunarlib.LunarLib'
 
     // Mark plugin for supporting Folia
     foliaSupported = true
