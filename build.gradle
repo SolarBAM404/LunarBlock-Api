@@ -4,7 +4,8 @@ plugins {
     id "net.minecrell.plugin-yml.bukkit" version "0.6.0"
 }
 
-group = 'me.solar'
+group = 'com.lunar-dev.lunarlib'
+archivesBaseName = "LunarBlock-Library"
 version = '1.0.0-SNAPSHOT'
 
 repositories {
