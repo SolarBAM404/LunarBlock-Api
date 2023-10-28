@@ -37,10 +37,16 @@ public class GameStateManager implements Listener {
         state = GameStates.ENDED;
     }
 
+
+    /**
+     * Checks whether the game is on bungee mode and if it is and the player does not have a bypass permission
+     * then adds them to the game
+     *
+     * @param event the event
+     */
     public void onPlayerJoin(PlayerJoinEvent event) {
         if (proxyMode && event.getPlayer().hasPermission("lunarlib.games.join.bypass")) {
             playerManager.addPlayer(event.getPlayer());
         }
     }
-}
 }
