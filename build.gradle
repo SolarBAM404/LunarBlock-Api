@@ -6,7 +6,7 @@ plugins {
     id 'signing'
 }
 
-group = 'com.lunar-dev.lunarlib'
+group = 'com.lunardev.lunarlib'
 archivesBaseName = "LunarBlock-Library"
 version = '1.0.0-SNAPSHOT'
 
@@ -79,10 +79,10 @@ checkstyle {
     configFile file("config/checkstyle/checkstyle.xml")
 }
 checkstyleMain {
-    source ='src/main/java'
+    source = 'src/main/java'
 }
 checkstyleTest {
-    source ='src/test/java'
+    source = 'src/test/java'
 }
 
 apply plugin: 'net.minecrell.plugin-yml.bukkit'
@@ -91,7 +91,6 @@ bukkit {
     name = 'LunarLibrary'
     version = getVersion()
     description = 'A library for my Minecraft Paper Plugins'
-    website = 'https://sparkblock.net'
 
     // Plugin main class (required)
     main = 'com.lunardev.lunarlib.LunarLib'
