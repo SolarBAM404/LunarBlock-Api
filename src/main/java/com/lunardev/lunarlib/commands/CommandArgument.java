@@ -1,7 +1,6 @@
 package com.lunardev.lunarlib.commands;
 
-import lombok.Data;
-import lombok.NonNull;
+import lombok.Getter;
 import net.kyori.adventure.audience.Audience;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -9,11 +8,11 @@ import org.jetbrains.annotations.Nullable;
 /**
  * Standard string type argument with or without an attach permission node.
  */
-@Data
+@Getter
 public class CommandArgument {
 
-    private @NonNull String value;
-    private @Nullable String permissionNode;
+    private final @NotNull String value;
+    private final @Nullable String permissionNode;
 
     /**
      * Instantiates a new Command argument.
