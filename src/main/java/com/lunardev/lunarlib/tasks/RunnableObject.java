@@ -7,7 +7,7 @@ public abstract class RunnableObject {
 
     private int taskId = -1;
 
-    public abstract void action();
+    protected abstract void action();
 
     private Runnable getRunnable() {
         return this::action;
